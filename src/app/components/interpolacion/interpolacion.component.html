@@ -1,0 +1,23 @@
+<div class="container col-lg-8 ">
+    <h3 class="text-center">Interpolacion Component</h3>
+    <p>Description : en este component usaremos la interpolacion,ademas el if y else</p>
+    <div class="card mx-auto">
+        <div class="card-body">
+            <p>Id : {{user?.id}}</p>
+            <p>Name : {{user?.name}}</p>
+            <p>Age : {{user?.age}} </p>
+            <p>Status @if(user.age>=18){
+                <p>Es mayor de edad</p>
+            }@else {
+                <p>Es menor de edad </p>
+            }
+        </p>
+
+        <a class="btn btn-link" href="/list">Go List</a>
+
+        
+
+        
+        </div>
+    </div>
+</div>

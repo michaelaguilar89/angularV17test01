@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card col-10">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-8"><h3>List Of Users ( {{list.length}} )  </h3></div>
+                <div class="col-4"><a class="btn btn-primary" routerLink="create">New</a></div>
+            </div>
+            
+        </div>
+        <div class="card-body">
+            <table class="table table striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Salary</th>
+                        <th>Active</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    @for(u of list;track u.id){
+                        <tr>
+                            <td>{{u.name}}</td>
+                            <td>{{u.age}}</td>
+                            <td>
+                                @for(s of u.salary;track s){
+                                    <td>{{s}} | </td>
+                                }
+                            </td>
+                            <td>{{u.active}}</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                <button type="button" class="btn btn-danger">Left</button>
+                                <button type="button" class="btn btn-warning">Middle</button>
+                                <a class="btn btn-success"  href="/component01">Go Component 01</a>
+                              </div>
+                            </td>   
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

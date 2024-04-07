@@ -1,0 +1,31 @@
+<div class="container">
+    <h3>Create User</h3>
+    <form formGroup="form" (ngSubmit)="onSubmit()">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput" formControlName="name">Name </label>
+          </div>
+          <div class="form-floating">
+            <input type="number" formControlName="age" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Age</label>
+          </div>
+          <div class="form-floating">
+            <input type="number" formControlName="salary" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Salary</label>
+          </div>
+          <div>
+            <label for="floatingPassword">Salary Active</label> <select class="form-select" formControlName="active" aria-label="Salary Active Select">
+                <option value="true">Active</option>
+                <option value="false">Inactive</option>
+              </select>
+              
+
+          </div>
+          <div class="mx-auto 0 mt-4">
+            <button type="submit" class="btn btn-primary btn-lg mx-5">Save</button>
+            <a class="btn btn-success" routerLink="/list">Go Back</a>
+          </div>
+
+    </form>
+
+</div>
